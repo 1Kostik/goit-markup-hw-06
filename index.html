@@ -365,19 +365,21 @@
                 </div>
                 <!-- form-subscribe-->
                 
-                <form class="form-subscribe">
-                    <label class="subscribe-label" for="user-email">Subscribe</label>
-                    <div class="subscribe-area">
+                <div class="form-subscribe">
+                    <p class="subscribe-label">Subscribe</p>
+                    <form class="subscribe-area">
+                        <label for="user-email">
                         <input class="email-input-footer" type="email" name="email" id="user-email" placeholder="E-mail" required
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                        </label>
                         <button class="send-btn" type="submit">
                             <span class="text-btn">Subscribe</span>
                             <svg class="icon-send" width="24" height="20">
                                 <use href="./images/icons.svg#send"></use>
                             </svg>
                         </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
             
         </footer>
@@ -390,7 +392,7 @@
                     </svg>
                 </button>
      <!-- form! -->
-            <h2 class="form-modal-title">Leave your contacts and we will call you back</h2>
+            <p class="form-modal-title">Leave your contacts and we will call you back</p>
             <form class="modal-form">
                 <label class="label"><span class="info-label">Name</span>
                     <span class="input-cover">
@@ -421,7 +423,7 @@
                     </span>
                 </label>
             
-                <label class="label"><span class="info-label">Comment</span><textarea class="textarea-modal-form" name="comment"
+                <label class="label-textarea"><span class="info-label">Comment</span><textarea class="textarea-modal-form" name="comment"
                         placeholder="Text input"></textarea>
                 </label>
             

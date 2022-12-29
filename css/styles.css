@@ -378,15 +378,14 @@ margin-bottom: 8px;
         transition-duration: 1000ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers-list-item:hover,
-.customers-list-item:focus {
-    border: 1px solid var(--primarybrand-color);
-        border-radius: 4px;
-}
 .customers-list-link:hover .customers-list-icon,
 .customers-list-link:focus .customers-list-icon {
     color: var(--primarybrand-color);
-    fill: var(--primarybrand-color);
+    fill: var(--primarybrand-color);  
+ }
+ .customers-list-item:hover,
+ .customers-list-item:focus {
+     border: 1px solid var(--primarybrand-color);
  }
 /* < !--Footer--> */
 .footer {
@@ -629,6 +628,9 @@ transition-property: box-shadow, background-color;
 
 
 }
+.label {
+    margin-bottom: 8px;
+}
 .subscribe-label {
     font-weight: 600;
     font-size: 16px;
@@ -649,13 +651,15 @@ transition-property: box-shadow, background-color;
     padding: 8px 0 8px 16px;
     border-radius: 4px;
     background-color: transparent;
-    color: var(--bg-white-color);
+    color: var(--bg-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
-
+.email-input-footer:focus {
+border: 1px solid var(--bg-color);
+}
 .send-btn {
-    position: relative;
+    
     width: 165px;
     height: 40px;
     display: flex;
@@ -685,9 +689,10 @@ transition-property: box-shadow, background-color;
     letter-spacing: 0.06em;
 }
 .icon-send {
-    position: absolute;
+   
     fill: var(--bg-color);
     left: 120px;
+    margin-left: 16px;
 }
 /*----- modal------ */
 .bakdrop.is-hidden {
@@ -724,9 +729,13 @@ transition-property: box-shadow, background-color;
 .modal {
     position: absolute;
     min-width: 408px;
-    min-height: 576px;
+    min-height: 584px;
     left: 50%;
     top: 50%;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 72px;
+    padding-bottom: 24px;
     border-radius: 4px;
     background-color: var(--bg-modal-color);
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -737,6 +746,9 @@ transition-property: box-shadow, background-color;
     transition-duration: 300ms;
     transition-timing-function:
     cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input:first-child {
+
 }
 .close-modal {
     position: absolute;
@@ -757,40 +769,39 @@ transition-property: box-shadow, background-color;
 }
 .form-modal-title {
     font-weight: 700;
-    margin-top: 48px;
     margin-bottom: 16px;
-          font-size: 16px;
-        line-height: 1.5;
-text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
 }
 .modal-form {
     display: flex;
     flex-direction: column;
     width: 360px;
     height: 336px;
-    margin-left: 24px;
+    
 }
 .input-cover {
     position: relative;
     display: block;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 .input-cover:focus {
-    color: var(--bg-ocean-close);
+    color: var(--primarybrand-color);
 }
 .icon-input {
     position: absolute;
-fill: var(--dark-color);
+    fill: var(--dark-color);
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
     transition: background-color;
     transition-duration: 250ms;
     transition-timing-function:
-        cubic-bezier(0.4, 0, 0.2, 1);
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input:focus+.icon-input {
-    fill: var(--bg-ocean-close);
+    fill: var(--primarybrand-color);
 }
 .info-label {
     display: block;
@@ -815,7 +826,7 @@ fill: var(--dark-color);
 }
 .input:focus {
     outline: none;
-    border-color: var(--bg-ocean-close);
+    border-color: var(--primarybrand-color);
 }
 .textarea-modal-form {
     font-size: 12px;
@@ -826,14 +837,16 @@ fill: var(--dark-color);
     height: 120px;
     padding-top: 8px;
     padding-left: 16px;
-    margin-bottom: 16px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     background-color: transparent;
 }
+.label-textarea {
+    margin-bottom: 16px;
+}
 .textarea-modal-form:focus {
     outline-style: none;
-    border-color: var(--bg-ocean-close);
+    border-color: var(--primarybrand-color);
 }
 .checkbox-privacy {
     justify-content: center;
@@ -883,7 +896,6 @@ fill: var(--dark-color);
 .privacy-policy {
     font-size: inherit;
     color: var(--primarybrand-color);
-
     transition: color;
     transition-duration: 250ms;
     transition-timing-function:
@@ -892,7 +904,7 @@ fill: var(--dark-color);
 .privacy-policy:hover,
 .privacy-policy:focus,
 .privacy-policy:active {
-    color: var(--bt-color);
+    color: var(--bg-ocean-close);
 }
 .send-form-btn {
     align-self: center;
